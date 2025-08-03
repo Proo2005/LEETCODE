@@ -10,3 +10,4 @@ class Solution:
                 return 1
             return tribo(k - 1) + tribo(k - 2) + tribo(k - 3)
         return tribo(n)
+s

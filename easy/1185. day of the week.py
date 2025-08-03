@@ -12,3 +12,4 @@ class Solution:
         
         mapping = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
         return mapping[h]
+

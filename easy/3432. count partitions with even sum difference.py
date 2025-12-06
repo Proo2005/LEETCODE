@@ -1,0 +1,12 @@
+class Solution:
+    def countPartitions(self, nums: List[int]) -> int:
+        total = sum(nums)
+        prefix = 0
+        count = 0
+        
+        for i in range(len(nums) - 1):  # valid partitions: i < n-1
+            prefix += nums[i]
+            if prefix % 2 == total % 2:
+                count += 1
+        
+        return count

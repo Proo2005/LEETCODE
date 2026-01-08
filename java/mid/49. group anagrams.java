@@ -1,3 +1,4 @@
+package java.mid;
 public import java.util.*;
 
 class Solution {

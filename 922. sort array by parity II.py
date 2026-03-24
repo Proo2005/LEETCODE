@@ -1,16 +1,16 @@
 class Solution:
-    def sortArrayByParityII(self, nums: List[int]) -> List[int]:
+    def sortArrayByParityII(self, num: List[int]) -> List[int]:
         i, j = 0, 1
-        n = len(nums)
+        n = len(num)
 
         while i < n and j < n:
-            if nums[i] % 2 == 0:
+            if num[i] % 2 == 0:
                 i += 2
-            elif nums[j] % 2 == 1:
+            elif num[j] % 2 == 1:
                 j += 2
             else:
-                nums[i], nums[j] = nums[j], nums[i]
+                num[i], num[j] = num[j], num[i]
                 i += 2
                 j += 2
 
-        return nums
+        return num

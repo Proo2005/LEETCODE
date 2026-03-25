@@ -13,4 +13,4 @@ for file in os.listdir(source):
 
         shutil.move(src_path, dst_path)
         print(f"Moved: {file}")
-print("All .sql files have been moved successfully.")
+print("All .sql files have been moved successfully hurrah.")

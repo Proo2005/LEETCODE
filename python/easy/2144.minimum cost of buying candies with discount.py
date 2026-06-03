@@ -7,3 +7,4 @@ class Solution:
             free += cost[i]
 
         return sum(cost) - free
+    

@@ -15,7 +15,7 @@ class Solution:
             chars[write] = ch
             write += 1
 
-            if count > 1:
+            if count > 1: 
                 for digit in str(count):
                     chars[write] = digit
                     write += 1

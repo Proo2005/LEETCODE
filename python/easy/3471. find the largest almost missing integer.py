@@ -1,14 +1,18 @@
+
 class Solution:
     def largestInteger(self, nums: List[int], k: int) -> int:
-        subarray_counts = defaultdict(int)
         n = len(nums)
-        for j in range(n - k + 1):
-            current_window = set(nums[j:j+k])
-            for num in current_window:
-                subarray_counts[num] += 1
-        best_num = -1 
         
-        for num, count in subarray_counts.items():
-            pass
+        if k == n:
+            return max(nums)
+        counts = Counter(nums)
+        if k == 1:
+            unique_elements = [num for num, count in counts.items() if count == 1]
+            return max(unique_elements) if unique_elements else -1
+        ans = -1
+        if counts[nums[0]] == 1:
+            ans = max(ans, nums[0])
+        if counts[nums[-1]] == 1:
+            ans = max(ans, nums[-1])
             
-        return best_num
+        return ans
